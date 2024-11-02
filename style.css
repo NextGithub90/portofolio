@@ -1,0 +1,7 @@
+.red-filter {
+  filter: brightness(0) invert(100%);
+}
+.jj {
+  border-radius: 431px;
+  background: radial-gradient(50% 50% at 50% 50%, #763cac 0%, rgba(50, 15, 133, 0) 100%);
+}
