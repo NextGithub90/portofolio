@@ -2,22 +2,18 @@ const cardsData = [
   {
     title: "Card Title 1",
     text: "This is a wider card with supporting text below.",
-    updated: "Last updated 1 min ago",
   },
   {
     title: "Card Title 2",
     text: "This is another card with supporting text below.",
-    updated: "Last updated 5 mins ago",
   },
   {
     title: "Card Title 3",
     text: "Here is a card with some additional content.",
-    updated: "Last updated 10 mins ago",
   },
   {
     title: "Card Title 4",
     text: "This is the fourth card with more supporting text.",
-    updated: "Last updated 15 mins ago",
   },
 ];
 
@@ -31,9 +27,8 @@ function generateCards(cards) {
       <img src="Screenshot (419).png" class="card-img-top" alt="...">
       <div class="card-body b">
         <h5 class="card-title">${card.title}</h5>
-        <p class="card-text">${card.text}</p>
-        <button type="button" class="btn btn-outline-secondary">Secondary</button>
-        <p class="card-text"><small class="text-body-secondary">${card.updated}</small></p>
+        <p class="card-text"style="color: rgba(200, 215, 221, 0.725);">${card.text}</p>
+        <button type="button" class="btn btn-outline-light">Secondary</button>
       </div>
     </div>
     `;
