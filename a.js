@@ -27,30 +27,16 @@ function generateCards(cards) {
 
   cards.forEach((card) => {
     const cardHTML = `
-    <div class="col-6 py-2 px 2 ">
-    <div class="card mb-3 "
-        style="max-width: 540px; background: linear-gradient(to right, #130429,#280F4C);">
-        <div class="row g-0">
-            <div class="col-md-4">
-                <img src="coffee-cup.png" class="img-fluid rounded-start p-3" alt="...">
-            </div>
-            <div class="col-md-8 d-flex">
-                <div class="card-body  align-content-center ">
-                    <h5 class="card-title text"
-                        style="font-family: 'Poppins', sans-serif; font-weight: 600;font-style: normal;">
-                       <p>  ${card.title}</p>
-                    </h5>
-                    <p class="card-text text"
-                        style="font-family: 'Poppins', 'sans-serif'; font-weight: 500; font-style: normal; font-size: .7em;">
-                      ${card.text}
-                        lead-in to additional content. This content is a little bit longer.</p>
-                    <p class="card-text text update"><small class="text update">${card.updated}</small></p>
-                </div>  
-            </div>
-        </div>
+    <div class=" card p-2 " style="width: 20rem;background-color: #334e9329;color: white; font-family: monospace; ">
+      <img src="Screenshot (419).png" class="card-img-top" alt="...">
+      <div class="card-body b">
+        <h5 class="card-title">${card.title}</h5>
+        <p class="card-text">${card.text}</p>
+        <button type="button" class="btn btn-outline-secondary">Secondary</button>
+        <p class="card-text"><small class="text-body-secondary">${card.updated}</small></p>
+      </div>
     </div>
-</div>
-      `;
+    `;
     cardContainer.innerHTML += cardHTML;
   });
 }

@@ -5,3 +5,6 @@
   border-radius: 431px;
   background: radial-gradient(50% 50% at 50% 50%, #763cac 0%, rgba(50, 15, 133, 0) 100%);
 }
+.box {
+  background: linear-gradient(90deg, #130428 7%, #251043 34%, #38126d 57%, #261045 85%, #190634 100%);
+}
