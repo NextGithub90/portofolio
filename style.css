@@ -8,3 +8,17 @@
 .box {
   background: linear-gradient(90deg, #130428 7%, #251043 34%, #38126d 57%, #261045 85%, #190634 100%);
 }
+.nav-pills .nav-link {
+  /* border: 2px solid red; */
+  color: #ffffff94;
+}
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(59, 130, 246, 0.2));
+  color: whitesmoke;
+  font-weight: bold;
+}
+.box-border {
+  box-shadow: 0px 1px 16px 0px rgb(0 0 0 / 45%), 0 1px 3px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+}
