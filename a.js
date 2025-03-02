@@ -44,3 +44,19 @@ const navLinks = document.querySelectorAll(".text");
 navLinks.forEach((text) => {
   text.style.color = "white";
 });
+
+// Handle form submission
+const form = document.getElementById("contact-form");
+form.addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  const username = document.getElementById("floatingInput").value;
+  const message = document.getElementById("exampleFormControlTextarea1").value;
+
+  const whatsappMessage = `username: ${username}\nMessage: ${message}`;
+  const whatsappLink = `https://wa.me/6283852443148?text=${encodeURIComponent(whatsappMessage)}`;
+
+  window.open(whatsappLink, "_blank");
+
+  alert("Success! Your message has been sent.");
+});
