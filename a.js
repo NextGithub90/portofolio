@@ -23,7 +23,7 @@ function generateCards(cards) {
 
   cards.forEach((card) => {
     const cardHTML = `
-    <div class=" card p-2 " style="width: 20rem;background-color: #334e9329;color: white; font-family: monospace; ">
+    <div class=" card p-3 " style="width: 20rem;background-color: #334e9329;color: white; font-family: monospace; ">
       <img src="Screenshot (419).png" class="card-img-top" alt="...">
       <div class="card-body b">
         <h5 class="card-title">${card.title}</h5>
