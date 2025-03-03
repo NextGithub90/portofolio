@@ -26,3 +26,20 @@
   transform: scale(1.1);
   transition: 0.5s;
 }
+.card-widthi {
+  width: 20rem;
+}
+.text-b-porto {
+  font-size: 1rem;
+}
+@media screen and (max-width: 768px) {
+  .text-awal {
+    margin-top: 50px;
+  }
+  .text-b-porto {
+    font-size: 0.8rem;
+  }
+  .card-widthi {
+    width: 40rem;
+  }
+}
