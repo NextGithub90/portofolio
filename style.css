@@ -32,6 +32,9 @@
 .text-b-porto {
   font-size: 1rem;
 }
+.text-b-contck {
+  font-size: 1rem;
+}
 @media screen and (max-width: 768px) {
   .text-awal {
     margin-top: 50px;
@@ -40,6 +43,12 @@
     font-size: 0.6rem;
   }
   .card-widthi {
-    width: 40rem;
+    width: 30rem;
+  }
+  .margin-card {
+    margin-left: 24px;
+  }
+  .text-b-contck {
+    font-size: 0.8rem;
   }
 }
