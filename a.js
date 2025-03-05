@@ -79,7 +79,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
     text: "Got a question? Send me a message, and I llget back to you soon.",
     scrollTrigger: {
       trigger: ".text-runi",
-      start: "top 80%", // Sesuaikan nilai ini sesuai kebutuhan
       toggleActions: "play none none none",
     },
   });
