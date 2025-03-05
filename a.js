@@ -12,7 +12,7 @@ const cardsData = [
   {
     title: "Card Title 3",
     text: "Here is a card with some additional content.",
-    animation: "fade-right",
+    animation: "fade-left",
   },
   {
     title: "Card Title 4",
@@ -27,7 +27,7 @@ function generateCards(cards) {
 
   cards.forEach((card) => {
     const cardHTML = `
-<div class="card p-3 card-widthi" style="background-color: #334e9329; color: white; font-family: monospace;" data-aos="${card.animation}" >
+<div class="card p-3 card-widthi overflow-x-hidden " style="background-color: #334e9329; color: white; font-family: monospace;" data-aos="${card.animation}" >
       <img src="Screenshot (419).png" class="card-img-top" alt="...">
       <div class="card-body b">
         <h5 class="card-title">${card.title}</h5>
