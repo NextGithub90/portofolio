@@ -12,7 +12,7 @@ const cardsData = [
   {
     title: "Card Title 3",
     text: "Here is a card with some additional content.",
-    animation: "fade-left",
+    animation: "fade-right",
   },
   {
     title: "Card Title 4",
