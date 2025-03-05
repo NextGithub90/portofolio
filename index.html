@@ -48,7 +48,7 @@
     }
 </style>
 
-<body>
+<body style="overflow-x: hidden;">
     <!-- Bagian container utama -->
     <div class="container-fluid" style="background-color: rgba(26, 11, 46, 1);">
         <div class="container">
@@ -100,11 +100,9 @@
                         book by
                         its <span style="color:rgba(113, 39, 186, 1) ;">cover...</span>
                     </h1>
-                    <p class="text text-md-start text-end float-end col-12"
+                    <p class="text text-md-start text-end float-end col-12 text-run"
                         style="font-size: .5rem; font-family: 'Courier New', Courier, monospace;">
-                        Because if
-                        the cover does not impress
-                        you what else can?</p>
+                    </p>
                 </div>
             </div>
 
@@ -203,9 +201,7 @@
                             class="text-light" style="display: inline-block;">
                             Showcase</p>
                     </h1>
-                    <h1 class="text-center text-b-contck" style="color: #ffffffc7;">Got a question? Send me a
-                        message, and I'll
-                        get back to you soon.</h1>
+                    <h1 class="text-center text-b-contck text-runi" style="color: #ffffffc7;"></h1>
                 </div>
                 <div class="col-md-9 col-11 mt-3">
                     <form id="contact-form">
@@ -244,6 +240,10 @@
     <script>
         AOS.init();
     </script>
+    <!-- gsap -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/TextPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
     <!-- Script untuk JavaScript eksternal -->
     <script src="a.js"></script>
 

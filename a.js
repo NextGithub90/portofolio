@@ -17,7 +17,7 @@ const cardsData = [
   {
     title: "Card Title 4",
     text: "This is the fourth card with more supporting text.",
-    animation: "fade-right",
+    animation: "zoom-in",
   },
 ];
 
@@ -69,4 +69,19 @@ form.addEventListener("submit", function (event) {
     icon: "success",
     confirmButtonText: "OK",
   });
+});
+// gsap animation
+document.addEventListener("DOMContentLoaded", (event) => {
+  gsap.registerPlugin(TextPlugin, ScrollTrigger);
+  gsap.from(".jj", { duration: 2, y: -100, opacity: 0, ease: "bounce" });
+  gsap.to(".text-runi", {
+    duration: 2,
+    text: "Got a question? Send me a message, and I llget back to you soon.",
+    scrollTrigger: {
+      trigger: ".text-runi",
+      start: "top 80%", // Sesuaikan nilai ini sesuai kebutuhan
+      toggleActions: "play none none none",
+    },
+  });
+  gsap.to(".text-run", { duration: 2, delay: 1, text: "Because if the cover does not impress you what else can?" });
 });
