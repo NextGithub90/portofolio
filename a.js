@@ -56,20 +56,19 @@ form.addEventListener("submit", function (event) {
 
   const username = document.getElementById("floatingInput").value;
   const message = document.getElementById("exampleFormControlTextarea1").value;
+  const contactMethod = document.querySelector('input[name="contact-method"]:checked').value;
 
-  const whatsappMessage = `Nama: ${username}\nPesan: ${message}`;
-  const whatsappLink = `https://wa.me/6283852443148?text=${encodeURIComponent(whatsappMessage)}`;
+  if (contactMethod === "whatsapp") {
+    const whatsappLink = `https://wa.me/6283852443148?text=${encodeURIComponent(`Nama: ${username}\nPesan: ${message}`)}`;
+    window.open(whatsappLink, "_blank");
+  } else {
+    const mailtoLink = `mailto:aldiartuda@gmail.com?subject=Pesan dari ${username}&body=${encodeURIComponent(message)}`;
+    window.open(mailtoLink, "_blank");
+  }
 
-  window.open(whatsappLink, "_blank");
-
-  // Menampilkan alert sukses menggunakan SweetAlert2
-  Swal.fire({
-    title: "Sukses!",
-    text: "Pesan Anda telah dikirim.",
-    icon: "success",
-    confirmButtonText: "OK",
-  });
+  Swal.fire("Sukses!", "Pesan Anda telah dikirim.", "success");
 });
+
 // gsap animation
 document.addEventListener("DOMContentLoaded", (event) => {
   gsap.registerPlugin(TextPlugin, ScrollTrigger);
