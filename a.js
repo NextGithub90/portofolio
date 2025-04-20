@@ -24,7 +24,6 @@ const cardsData = [
 // Fungsi untuk men-generate card
 function generateCards(cards) {
   const cardContainer = document.getElementById("card-container");
-
   cards.forEach((card) => {
     const cardHTML = `
 <div class="card p-3 card-widthi overflow-x-hidden " style="background-color: #334e9329; color: white; font-family: monospace;" data-aos="${card.animation}" >
@@ -43,6 +42,54 @@ function generateCards(cards) {
 // Panggil fungsi untuk men-generate card
 generateCards(cardsData);
 
+const techData = [
+  {
+    name: "HTML",
+    icon: "fa-brands fa-html5",
+    color: "text-danger",
+    boxShadow: "0px 4px 10px rgba(255, 0, 0, 0.5)", // Contoh box-shadow untuk HTML
+  },
+  {
+    name: "CSS",
+    icon: "fa-brands fa-css3-alt",
+    color: "text-primary",
+    boxShadow: "0px 4px 10px rgba(0, 0, 255, 0.5)",
+  },
+  {
+    name: "JavaScript",
+    icon: "fa-brands fa-js",
+    color: "text-warning",
+    boxShadow: "0px 4px 10px rgba(255, 255, 0, 0.5)",
+  },
+  {
+    name: "Bootstrap",
+    icon: "fa-brands fa-bootstrap",
+    color: "text-info",
+    boxShadow: "0px 4px 10px rgba(0, 255, 255, 0.5)",
+  },
+  {
+    name: "Node.js",
+    icon: "fa-brands fa-node-js",
+    color: "text-success",
+    boxShadow: "0px 4px 10px rgba(0, 255, 0, 0.5)",
+  },
+];
+// Fungsi untuk men-generate tech card
+function generateTechCards(techs) {
+  const techContainer = document.getElementById("tech-container");
+  techs.forEach((tech) => {
+    const techHTML = `
+    <div class="card p-3 align-items-center rounded-3 overflow-x-hidden"
+     style="background-color: rgba(30, 41, 59, 0.4); color: white; font-family: monospace; box-shadow: ${tech.boxShadow};">
+     <i class="${tech.icon} p-3 ${tech.color}" style="font-size: 4rem;"></i>
+     <p>${tech.name}</p>
+    </div>
+ `;
+    techContainer.innerHTML += techHTML;
+  });
+}
+// Panggil fungsi untuk men-generate tech
+generateTechCards(techData);
 // Mengubah semua teks dalam navbar menjadi putih
 const navLinks = document.querySelectorAll(".text");
 navLinks.forEach((text) => {
