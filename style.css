@@ -4,8 +4,8 @@
 .text {
   transition: color 0.2s ease-in-out;
 }
-.nav-link:hover,
-.nav-link.active {
+.nv:hover,
+.nv.active {
   color: #a370f0 !important; /* Warna lebih mencolok */
 }
 .red-filter {
