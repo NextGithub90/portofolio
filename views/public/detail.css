@@ -1,0 +1,146 @@
+body {
+  background: linear-gradient(145deg, #0a0a0a 0%, #11071f 50%, #1b1034 100%);
+  background-attachment: fixed;
+  background-size: cover;
+  color: #e0e0e0;
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.back-btn {
+  text-decoration: none;
+  color: #58a6ff;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+.back-btn:hover {
+  color: #89caff;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+  box-shadow: 0 0 30px rgba(130, 52, 194, 0.2);
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 3rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.text-content {
+  flex: 1 1 400px;
+  max-width: 500px;
+}
+
+.text-content h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(45deg, #6a11cb, #2575fc);
+  background-clip: text;
+  color: transparent;
+}
+
+.text-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  opacity: 0.9;
+  margin-bottom: 2rem;
+}
+
+.features {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.feature-box {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+}
+
+.feature-box i {
+  font-size: 1.8rem;
+  color: #bb86fc;
+}
+
+.feature-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.feature-text h4 {
+  margin-bottom: 0.3rem;
+  color: #bb86fc;
+}
+
+.feature-text p {
+  font-size: 0.95rem;
+  opacity: 0.8;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.buttons a {
+  text-decoration: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+  font-size: 1rem;
+}
+
+.btn-learn {
+  border: 2px solid #bb86fc;
+  color: #bb86fc;
+}
+
+.btn-learn:hover {
+  background: #bb86fc;
+  color: #120628;
+}
+
+.btn-get {
+  background: linear-gradient(45deg, #00c6ff, #0072ff);
+  color: white;
+}
+
+.btn-get:hover {
+  background: linear-gradient(45deg, #0072ff, #00c6ff);
+}
+
+.image-content {
+  flex: 1 1 400px;
+  max-width: 500px;
+}
+
+.image-content img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(130, 52, 194, 0.5);
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+}
