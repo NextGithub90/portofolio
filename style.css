@@ -62,4 +62,15 @@
   .text-b-contck {
     font-size: 0.8rem;
   }
+  .tech-card {
+    width: 41%;
+    overflow-y: hidden;
+    height: 25%;
+    /* border: 2px solid; */
+    gap: 0;
+    padding: 3rem;
+  }
+  .i-tech {
+    font-size: 2rem;
+  }
 }

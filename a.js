@@ -1,23 +1,27 @@
 const cardsData = [
   {
-    title: "Card Title 1",
-    text: "This is a wider card with supporting text below.",
+    title: "Portofolio V2",
+    text: "Website Portofolio-v4 adalah versi sebelumnya darin",
     animation: "fade-up",
+    link: "https://nextgithub90.github.io/portofolio/",
   },
   {
     title: "Card Title 2",
-    text: "This is another card with supporting text below.",
+    text: "Website Portofolio-v4 adalah versi sebelumnya dari..",
     animation: "fade-left",
+    link: "https://example.com/card2",
   },
   {
     title: "Card Title 3",
     text: "Here is a card with some additional content.",
     animation: "fade-right",
+    link: "https://example.com/card3",
   },
   {
     title: "Card Title 4",
     text: "This is the fourth card with more supporting text.",
     animation: "zoom-in",
+    link: "https://example.com/card4",
   },
 ];
 
@@ -26,14 +30,25 @@ function generateCards(cards) {
   const cardContainer = document.getElementById("card-container");
   cards.forEach((card) => {
     const cardHTML = `
-<div class="card p-3 card-widthi overflow-x-hidden " style="background-color: #334e9329; color: white; font-family: monospace;" data-aos="${card.animation}" >
-      <img src="Screenshot (419).png" class="card-img-top" alt="...">
-      <div class="card-body b">
-        <h5 class="card-title">${card.title}</h5>
-        <p class="card-text"style="color: rgba(200, 215, 221, 0.725);">${card.text}</p>
-        <button type="button" class="btn btn-outline-light">Secondary</button>
+<div class="card p-3 card-widthi overflow-x-hidden  h-100" style="background-color: #334e9329; color: white; font-family: monospace;" data-aos="${card.animation}">
+  <img src="./img/Screenshot (419).png" class="card-img-top" alt="...">
+  <div class="card-body b">
+    <h5 class="card-title">${card.title}</h5>
+    <p class="card-text" style="color: rgba(200, 215, 221, 0.725);">${card.text}</p>
+    <div class="row mt-3">
+      <div class="col text-start">
+        <a href="${card.link}" target="_blank" style="text-decoration: none; color: inherit;">
+          <i class="bi bi-browser-chrome fs-5"></i>
+        </a>
+      </div>
+      <div class="col text-end">
+        <a href="${card.link}" target="_blank">
+          <button type="button" class="btn btn-outline-light">Details <i class="bi bi-arrow-right"></i></button>
+        </a>
       </div>
     </div>
+  </div>
+</div>
     `;
     cardContainer.innerHTML += cardHTML;
   });
@@ -79,9 +94,9 @@ function generateTechCards(techs) {
   const techContainer = document.getElementById("tech-container");
   techs.forEach((tech) => {
     const techHTML = `
-    <div class="card p-3 align-items-center rounded-3 overflow-x-hidden"
+    <div class="card p-lg-3  align-items-center rounded-3 overflow-x-hidden tech-card"
      style="background-color: rgba(30, 41, 59, 0.4); color: white; font-family: monospace; box-shadow: ${tech.boxShadow};">
-     <i class="${tech.icon} p-3 ${tech.color}" style="font-size: 4rem;"></i>
+     <i class="${tech.icon} p-3 ${tech.color} i-tech" style="font-size: 4rem;"></i>
      <p>${tech.name}</p>
     </div>
  `;
