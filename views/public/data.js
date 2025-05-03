@@ -4,7 +4,7 @@ const cardsData = [
     text: "Website Portofolio-v2 adalah versi terbaru dari..",
     animation: "fade-up",
     link: "https://nextgithub90.github.io/portofolio/",
-    file: "../Contohdetail.html",
+    id: 1,
     duration: 800,
     delay: 100,
     image: "../img/portofolio.png", // Tambahkan properti image
@@ -16,6 +16,7 @@ const cardsData = [
     link: "https://example.com/card2",
     duration: 1000,
     delay: 200,
+    id: 2,
     image: "../img/naruto.png", // Gambar untuk card 2
   },
   {
@@ -25,6 +26,7 @@ const cardsData = [
     link: "https://example.com/card3",
     duration: 1200,
     delay: 300,
+    id: 3,
     image: "../img/portofolio.png", // Tambahkan properti image
   },
   {
@@ -34,6 +36,7 @@ const cardsData = [
     link: "https://example.com/card4",
     duration: 1400,
     delay: 400,
+    id: 4,
     image: "../img/portofolio.png", // Tambahkan properti image
   },
 ];
@@ -59,7 +62,7 @@ function generateCards(cards) {
         </a>
       </div>
       <div class="col text-end">
-        <a href="${card.file}">
+        <a href="../detail/${card.id}">
           <button type="button" class="btn btn-outline-light">Details <i class="bi bi-arrow-right"></i></button>
         </a>
       </div>

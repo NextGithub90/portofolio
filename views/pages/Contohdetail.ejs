@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        <%= Detail.title %>
+    </title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="/detail.css">
+</head>
+
+<body>
+    <a href="/" class="back-btn">← Back</a>
+
+    <div class="glass-card" data-aos="fade-up" data-aos-delay="60">
+        <div class="container">
+            <div class="text-content">
+                <h1>
+                    <%= Detail.title %>
+                </h1>
+                <p>
+                    <%= Detail.description %>
+                </p>
+                <div class="buttons">
+                    <a href="<%= Detail.github %>" class="btn-learn" target="_blank">
+                        <i class="fa-brands fa-github"></i> GitHub
+                    </a>
+                </div>
+            </div>
+            <div class="image-content">
+                <img src="<%= Detail.image %>" alt="<%= Detail.title %>">
+            </div>
+            <div class="tech-stack">
+                <h2>Tech Stack</h2>
+                <div class="tech-icons">
+                    <% Detail.techStack.forEach((tech)=> { %>
+                        <div class="tech-item">
+                            <span>
+                                <%= tech %>
+                            </span>
+                        </div>
+                        <% }); %>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: false,
+            mirror: true,
+            easing: 'ease-in-out-quad'
+        });
+    </script>
+</body>
+
+</html>
