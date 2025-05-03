@@ -5,16 +5,18 @@ const cardsData = [
     animation: "fade-up",
     link: "https://nextgithub90.github.io/portofolio/",
     file: "../Contohdetail.html",
-    duration: 800, // Durasi animasi dalam milidetik
-    delay: 100, // Delay animasi dalam milidetik
+    duration: 800,
+    delay: 100,
+    image: "../img/portofolio.png", // Tambahkan properti image
   },
   {
-    title: "Card Title 2",
-    text: "Website Portofolio-v4 adalah versi sebelumnya dari..",
+    title: "Website Film",
+    text: "Website ini adalah awal mula...",
     animation: "fade-left",
     link: "https://example.com/card2",
     duration: 1000,
     delay: 200,
+    image: "../img/naruto.png", // Gambar untuk card 2
   },
   {
     title: "Card Title 3",
@@ -23,6 +25,7 @@ const cardsData = [
     link: "https://example.com/card3",
     duration: 1200,
     delay: 300,
+    image: "../img/portofolio.png", // Tambahkan properti image
   },
   {
     title: "Card Title 4",
@@ -31,6 +34,7 @@ const cardsData = [
     link: "https://example.com/card4",
     duration: 1400,
     delay: 400,
+    image: "../img/portofolio.png", // Tambahkan properti image
   },
 ];
 
@@ -44,7 +48,7 @@ function generateCards(cards) {
      data-aos="${card.animation}" 
      data-aos-duration="${card.duration}" 
      data-aos-delay="${card.delay}">
-  <img src="../img/Screenshot (419).png" class="card-img-top" alt="...">
+  <img src="${card.image}" class="card-img-top " alt="${card.title}" width="287" height="161">
   <div class="card-body b">
     <h5 class="card-title">${card.title}</h5>
     <p class="card-text" style="color: rgba(200, 215, 221, 0.725);">${card.text}</p>
@@ -66,7 +70,6 @@ function generateCards(cards) {
     cardContainer.innerHTML += cardHTML;
   });
 }
-
 // Panggil fungsi untuk men-generate card
 generateCards(cardsData);
 
