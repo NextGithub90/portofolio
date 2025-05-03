@@ -10,7 +10,9 @@ app.use(express.static(path.join(__dirname, "../public")));
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "../pages/index.html"));
 });
-
+app.get("/Contohdetail.html", (req, res) => {
+  res.sendFile(path.join(__dirname, "../pages/Contohdetail.html"));
+});
 // Menjalankan server
 app.listen(port, () => {
   console.log(`Example app listening on http://localhost:${port}`);

@@ -1,27 +1,36 @@
 const cardsData = [
   {
     title: "Portofolio V2",
-    text: "Website Portofolio-v4 adalah versi sebelumnya darin",
+    text: "Website Portofolio-v2 adalah versi terbaru dari..",
     animation: "fade-up",
     link: "https://nextgithub90.github.io/portofolio/",
+    file: "../Contohdetail.html",
+    duration: 800, // Durasi animasi dalam milidetik
+    delay: 100, // Delay animasi dalam milidetik
   },
   {
     title: "Card Title 2",
     text: "Website Portofolio-v4 adalah versi sebelumnya dari..",
     animation: "fade-left",
     link: "https://example.com/card2",
+    duration: 1000,
+    delay: 200,
   },
   {
     title: "Card Title 3",
     text: "Here is a card with some additional content.",
     animation: "fade-right",
     link: "https://example.com/card3",
+    duration: 1200,
+    delay: 300,
   },
   {
     title: "Card Title 4",
     text: "This is the fourth card with more supporting text.",
     animation: "zoom-in",
     link: "https://example.com/card4",
+    duration: 1400,
+    delay: 400,
   },
 ];
 
@@ -30,7 +39,11 @@ function generateCards(cards) {
   const cardContainer = document.getElementById("card-container");
   cards.forEach((card) => {
     const cardHTML = `
-<div class="card p-3 card-widthi overflow-x-hidden  h-100" style="background-color: #334e9329; color: white; font-family: monospace;" data-aos="${card.animation}">
+<div class="card p-3 card-widthi overflow-x-hidden h-100" 
+     style="background-color: #334e9329; color: white; font-family: monospace;" 
+     data-aos="${card.animation}" 
+     data-aos-duration="${card.duration}" 
+     data-aos-delay="${card.delay}">
   <img src="../img/Screenshot (419).png" class="card-img-top" alt="...">
   <div class="card-body b">
     <h5 class="card-title">${card.title}</h5>
@@ -42,7 +55,7 @@ function generateCards(cards) {
         </a>
       </div>
       <div class="col text-end">
-        <a href="${card.link}" target="_blank">
+        <a href="${card.file}">
           <button type="button" class="btn btn-outline-light">Details <i class="bi bi-arrow-right"></i></button>
         </a>
       </div>
@@ -137,7 +150,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   gsap.from(".jj", { duration: 2, y: -100, opacity: 0, ease: "bounce" });
   gsap.to(".text-runi", {
     duration: 2,
-    text: "Got a question? Send me a message, and I llget back to you soon.",
+    text: "Got a question? Send me a message, and I'll get back to you soon.",
     scrollTrigger: {
       trigger: ".text-runi",
       toggleActions: "play none none none",

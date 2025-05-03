@@ -45,7 +45,24 @@
 .text-b-contck {
   font-size: 1rem;
 }
+.buttons button {
+  text-decoration: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+  font-size: 1rem;
+}
+.btn-learn {
+  border: 2px solid #bb86fc;
+  color: #bb86fc;
+  background-color: rgb(17, 7, 31);
+}
 
+.btn-learn:hover {
+  background: #bb86fc;
+  color: #120628;
+}
 @media screen and (max-width: 768px) {
   .text-awal {
     margin-top: 50px;

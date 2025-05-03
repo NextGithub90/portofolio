@@ -15,6 +15,8 @@ body {
   margin-bottom: 2rem;
   display: inline-block;
   transition: color 0.3s ease;
+  margin-bottom: 10px;
+  padding: 1rem;
 }
 
 .back-btn:hover {
@@ -28,9 +30,14 @@ body {
   -webkit-backdrop-filter: blur(10px);
   border-radius: 20px;
   padding: 2rem;
-  max-width: 1200px;
+  max-width: 90%;
   margin: auto;
   box-shadow: 0 0 30px rgba(130, 52, 194, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.glass-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 40px rgba(130, 52, 194, 0.3);
 }
 
 .container {
@@ -53,6 +60,17 @@ body {
   background: linear-gradient(45deg, #6a11cb, #2575fc);
   background-clip: text;
   color: transparent;
+  animation: textReveal 1.5s ease forwards;
+}
+@keyframes textReveal {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .text-content p {
@@ -60,39 +78,6 @@ body {
   line-height: 1.6;
   opacity: 0.9;
   margin-bottom: 2rem;
-}
-
-.features {
-  display: flex;
-  gap: 2rem;
-  margin-bottom: 2rem;
-}
-
-.feature-box {
-  flex: 1;
-  display: flex;
-  align-items: flex-start;
-  gap: 0.8rem;
-}
-
-.feature-box i {
-  font-size: 1.8rem;
-  color: #bb86fc;
-}
-
-.feature-text {
-  display: flex;
-  flex-direction: column;
-}
-
-.feature-text h4 {
-  margin-bottom: 0.3rem;
-  color: #bb86fc;
-}
-
-.feature-text p {
-  font-size: 0.95rem;
-  opacity: 0.8;
 }
 
 .buttons {
@@ -107,8 +92,34 @@ body {
   font-weight: bold;
   transition: background 0.3s ease;
   font-size: 1rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
-
+.buttons a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  left: -100%;
+  top: 0;
+  transition: left 0.4s ease;
+}
+.buttons a:hover::after {
+  left: 0;
+}
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
 .btn-learn {
   border: 2px solid #bb86fc;
   color: #bb86fc;
@@ -129,7 +140,7 @@ body {
 }
 
 .image-content {
-  flex: 1 1 400px;
+  /* flex: 1 1 400px; */
   max-width: 500px;
 }
 
@@ -137,10 +148,83 @@ body {
   width: 100%;
   border-radius: 12px;
   box-shadow: 0 0 20px rgba(130, 52, 194, 0.5);
+  animation: float 4s ease-in-out infinite;
+}
+/* Tambahkan CSS berikut di akhir file */
+.tech-stack {
+  margin-top: 1rem;
+  width: 100%;
+  text-align: center;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tech-stack h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #6a11cb;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.tech-icons {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.tech-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.tech-item i {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 15px rgba(106, 17, 203, 0.4);
+}
+
+.tech-item span {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #bb86fc;
+}
+
+.tech-item:hover {
+  transform: translateY(-5px);
+}
+
+/* Warna khusus untuk setiap icon */
+.fa-html5 {
+  color: #e34f26;
+}
+.fa-css3-alt {
+  color: #264de4;
+}
+.fa-js-square {
+  color: #f7df1e;
+}
+.fa-node {
+  color: #68a063;
+}
+.fa-code {
+  color: #689f63;
 }
 
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
+  }
+
+  .tech-item i {
+    font-size: 2rem;
+  }
+  .tech-stack {
+    width: 80%;
   }
 }
