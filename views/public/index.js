@@ -1,8 +1,8 @@
 const express = require("express");
 const path = require("path");
 const app = express();
-const port = 3000;
 const { loadDetails, findDetail } = require("./detail.js");
+
 // Template engine (gunakan ejs)
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "../")); // Atur folder views ke "c:\Users\Lenovo\portofolio-5\views"
@@ -18,12 +18,8 @@ app.get("/", (req, res) => {
 // Route untuk melayani file Contohdetail.html
 app.get("/detail/:id", (req, res) => {
   const Detail = findDetail(req.params.id);
-
   res.render("pages/Contohdetail", { Detail });
 });
 
-// // Menjalankan server
-// app.listen(port, () => {
-//   console.log(`Example app listening on http://localhost:${port}`);
-// });
+// Ekspor aplikasi Express
 module.exports = app;
