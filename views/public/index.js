@@ -5,7 +5,7 @@ const port = 3000;
 const { loadDetails, findDetail } = require("./detail.js");
 // Template engine (gunakan ejs)
 app.set("view engine", "ejs");
-app.set("views", path.join(__dirname, "../")); // Atur folder views ke "c:\Users\Lenovo\portofolio-5\views"
+app.set("views", path.resolve(__dirname, "../pages"));
 
 // Middleware untuk melayani file statis dari folder "public"
 app.use(express.static(path.join(__dirname, "../public")));
