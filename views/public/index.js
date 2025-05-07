@@ -7,10 +7,10 @@ const { loadDetails, findDetail } = require("./detail.js");
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "../")); // Atur folder views ke "c:\Users\Lenovo\portofolio-5\views"
 console.log("Views folder:", path.join(__dirname, "../pages"));
-// app.use(express.json());
+app.use(express.json());
 
 // Middleware untuk melayani file statis dari folder "public"
-app.use(express.static(path.join(__dirname, "../public")));
+app.use(express.static(path.join(__dirname, "views", "public")));
 
 // Route untuk melayani file index.ejs
 app.get("/", (req, res) => {
