@@ -5,7 +5,9 @@ const port = 3000;
 const { loadDetails, findDetail } = require("./detail.js");
 // Template engine (gunakan ejs)
 app.set("view engine", "ejs");
-app.set("views", path.resolve(__dirname, "../pages"));
+app.set("views", path.join(__dirname, "../")); // Atur folder views ke "c:\Users\Lenovo\portofolio-5\views"
+console.log("Views folder:", path.join(__dirname, "../pages"));
+app.use(express.json());
 
 // Middleware untuk melayani file statis dari folder "public"
 app.use(express.static(path.join(__dirname, "../public")));
@@ -22,8 +24,8 @@ app.get("/detail/:id", (req, res) => {
   res.render("pages/Contohdetail", { Detail });
 });
 
-// // Menjalankan server
-// app.listen(port, () => {
-//   console.log(`Example app listening on http://localhost:${port}`);
-// });
+// Menjalankan server
+app.listen(port, () => {
+  console.log(`Example app listening on http://localhost:${port}`);
+});
 module.exports = app;
