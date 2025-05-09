@@ -10,7 +10,7 @@ console.log("Views folder:", path.join(__dirname, "../pages"));
 app.use(express.json());
 
 // Middleware untuk melayani file statis dari folder "public"
-app.use(express.static(path.join(__dirname, "views", "public")));
+app.use(express.static(path.join(__dirname, "../public")));
 
 // Route untuk melayani file index.ejs
 app.get("/", (req, res) => {
