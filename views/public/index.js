@@ -25,8 +25,8 @@ app.get("/detail/:id", (req, res) => {
   res.render("pages/Contohdetail", { Detail });
 });
 
-// Menjalankan server
-app.listen(port, () => {
-  console.log(`Example app listening on http://localhost:${port}`);
-});
+// // Menjalankan server
+// app.listen(port, () => {
+//   console.log(`Example app listening on http://localhost:${port}`);
+// });
 module.exports = app;
