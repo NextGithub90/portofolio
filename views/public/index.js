@@ -5,12 +5,16 @@ const port = process.env.PORT || 3000; // Vercel akan mengatur PORT
 const { loadDetails, findDetail } = require("./detail.js");
 // Template engine (gunakan ejs)
 app.set("view engine", "ejs");
-app.set("views", path.join(__dirname, "../")); // Atur folder views ke "c:\Users\Lenovo\portofolio-5\views"
+app.set("views", path.join(__dirname, "../pages")); // Atur folder views ke "c:\Users\Lenovo\portofolio-5\views\pages"
+console.log("Views folder:", path.join(__dirname, "../pages"));
 console.log("Views folder:", path.join(__dirname, "../"));
 app.use(express.json());
 
 // Middleware untuk melayani file statis dari folder "public"
+const serveStatic = require("serve-static");
+app.use(serveStatic(path.join(__dirname, "../public")));
 app.use(express.static(path.join(__dirname, "../public")));
+
 // Route untuk melayani file index.ejs
 app.get("/", (req, res) => {
   res.render("pages/index");
