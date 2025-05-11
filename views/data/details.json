@@ -5,15 +5,15 @@
       "description": "Website Portofolio-v2 adalah versi sebelumnya dari website ini yang berisi informasi mengenai berbagai proyek yang telah saya kerjakan, sertifikasi yang saya peroleh, serta teknologi yang saya kuasai.",
       "image": "../img/portofolio.png",
       "techStack": ["HTML5", "CSS3", "JavaScript", "Node.js", "Express.js"],
-      "github": "https://github.com/username/portofolio-v2"
+      "github": "https://github.com/NextGithub90/portofolio"
     },
     {
       "id": 2,
       "title": "Website Film",
-      "description": "Website ini adalah awal mula saya belajar membuat aplikasi berbasis web dengan fitur pencarian film.",
+      "description": "Website ini adalah awal mula saya belajar membuat aplikasi berbasis web dengan fitur pencarian film Lewat Channel WPU.",
       "image": "../img/naruto.png",
       "techStack": ["HTML5", "CSS3", "JavaScript", "API"],
-      "github": "https://github.com/username/website-film"
+      "github": "https://github.com/NextGithub90/MyFilmWebsite"
     },
     {
       "id": 3,

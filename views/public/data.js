@@ -3,7 +3,7 @@ const cardsData = [
     title: "Portofolio V2",
     text: "Website Portofolio-v2 adalah versi terbaru dari..",
     animation: "fade-up",
-    link: "https://nextgithub90.github.io/portofolio/",
+    link: "https://portofolio-eight-lyart.vercel.app/",
     id: 1,
     duration: 800,
     delay: 100,
@@ -51,7 +51,7 @@ function generateCards(cards) {
      data-aos="${card.animation}" 
      data-aos-duration="${card.duration}" 
      data-aos-delay="${card.delay}">
-  <img src="${card.image}" class="card-img-top " alt="${card.title}" width="287" height="161">
+  <img src="${card.image}" class="card-img-top img-edit" alt="${card.title}" width="287" height="161">
   <div class="card-body b">
     <h5 class="card-title">${card.title}</h5>
     <p class="card-text" style="color: rgba(200, 215, 221, 0.725);">${card.text}</p>
