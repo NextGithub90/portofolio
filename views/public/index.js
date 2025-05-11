@@ -9,7 +9,7 @@ app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "../")); //
 console.log("Views folder:", path.join(__dirname, "../"));
 app.use(express.json());
-// app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: true }));
 
 // Middleware untuk melayani file statis dari folder "public"
 
@@ -30,5 +30,5 @@ app.get("/detail/:id", (req, res) => {
 app.listen(port, () => {
   console.log(`Example app listening on http://localhost:${port}`);
 });
-console.log("Server is running on port", port);
+
 module.exports = app;
