@@ -164,3 +164,13 @@ document.addEventListener("DOMContentLoaded", (event) => {
   });
   gsap.to(".text-run", { duration: 2, delay: 1, text: "Because if the cover does not impress you what else can?" });
 });
+// toast message
+const toastTrigger = document.getElementById("liveToastBtn");
+const toastLiveExample = document.getElementById("liveToast");
+
+if (toastTrigger) {
+  const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample);
+  toastTrigger.addEventListener("click", () => {
+    toastBootstrap.show();
+  });
+}
