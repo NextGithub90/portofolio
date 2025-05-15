@@ -12,7 +12,8 @@ const cardsData = [
   {
     title: "Website Film",
     text: "Website ini adalah awal mula...",
-    animation: "fade-left",
+    animation: "fade-up",
+
     link: "https://example.com/card2",
     duration: 1000,
     delay: 200,
@@ -22,7 +23,8 @@ const cardsData = [
   {
     title: "Card Title 3",
     text: "Here is a card with some additional content.",
-    animation: "fade-right",
+    animation: "fade-up",
+
     link: "https://example.com/card3",
     duration: 1200,
     delay: 300,
@@ -32,7 +34,8 @@ const cardsData = [
   {
     title: "Card Title 4",
     text: "This is the fourth card with more supporting text.",
-    animation: "zoom-in",
+    animation: "fade-up",
+
     link: "https://example.com/card4",
     duration: 1400,
     delay: 400,
