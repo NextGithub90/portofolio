@@ -78,6 +78,10 @@ body {
   line-height: 1.6;
   opacity: 0.9;
   margin-bottom: 2rem;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /* Subtle shadow for better readability */
+  background: linear-gradient(45deg, #ffffff, #bb86fc); /* Gradient text effect */
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .buttons {
@@ -225,6 +229,6 @@ body {
     font-size: 2rem;
   }
   .tech-stack {
-    width: 80%;
+    width: 100%;
   }
 }

@@ -37,8 +37,8 @@ const cardsData = [
     animation: "fade-up",
 
     link: "https://example.com/card4",
-    duration: 1400,
-    delay: 400,
+    duration: 1200,
+    delay: 100,
     id: 4,
     image: "../img/portofolio.png", // Tambahkan properti image
   },
@@ -59,14 +59,14 @@ function generateCards(cards) {
     <h5 class="card-title">${card.title}</h5>
     <p class="card-text" style="color: rgba(200, 215, 221, 0.725);">${card.text}</p>
     <div class="row mt-3">
-      <div class="col text-start">
+      <div class="col text-start ">
         <a href="${card.link}" target="_blank" style="text-decoration: none; color: inherit;">
           <i class="bi bi-browser-chrome fs-5"></i>
         </a>
       </div>
       <div class="col text-end">
         <a href="../detail/${card.id}">
-          <button type="button" class="btn btn-outline-light">Details <i class="bi bi-arrow-right"></i></button>
+          <button type="button" class="btn btn-outline-light btn-update">Details <i class="bi bi-arrow-right"></i></button>
         </a>
       </div>
     </div>
