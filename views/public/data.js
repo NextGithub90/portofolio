@@ -66,7 +66,7 @@ function generateCards(cards) {
       </div>
       <div class="col text-end">
         <a href="../detail/${card.id}">
-          <button type="button" class="btn btn-outline-light btn-update">Details <i class="bi bi-arrow-right"></i></button>
+          <button type="button" class="btn btn-outline-light btn-update gap-2">Details <i class="bi bi-arrow-right"></i></button>
         </a>
       </div>
     </div>
