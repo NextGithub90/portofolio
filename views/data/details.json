@@ -19,7 +19,7 @@
       "id": 3,
       "title": "Website Travel",
       "description": "website travel adalah sebuah aplikasi web yang memungkinkan pengguna untuk mencari dan memesan tiket perjalanan, hotel, dan layanan terkait lainnya.",
-      "image": "../img/travel.png",
+      "image": "../img/travelWEb.png",
       "techStack": ["HTML5", "CSS3", "JavaScript"],
       "github": "https://github.com/NextGithub90/travel"
     },

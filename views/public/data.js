@@ -29,7 +29,7 @@ const cardsData = [
     duration: 1200,
     delay: 300,
     id: 3,
-    image: "../img/travel.png", // Tambahkan properti image
+    image: "../img/travelWEb.png", // Tambahkan properti image
   },
   {
     title: "Card Title 4",
