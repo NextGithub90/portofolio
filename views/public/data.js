@@ -21,15 +21,15 @@ const cardsData = [
     image: "../img/naruto.png", // Gambar untuk card 2
   },
   {
-    title: "Card Title 3",
-    text: "Here is a card with some additional content.",
+    title: "Website Travel",
+    text: "website travel adalah sebuah aplikasi...",
     animation: "fade-up",
 
-    link: "https://example.com/card3",
+    link: "https://nextgithub90.github.io/travel/",
     duration: 1200,
     delay: 300,
     id: 3,
-    image: "../img/portofolio.png", // Tambahkan properti image
+    image: "../img/travel.png", // Tambahkan properti image
   },
   {
     title: "Card Title 4",

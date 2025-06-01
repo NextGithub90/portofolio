@@ -17,11 +17,11 @@
     },
     {
       "id": 3,
-      "title": "Card Title 3",
-      "description": "Here is a card with some additional content.",
-      "image": "../img/portofolio.png",
+      "title": "Website Travel",
+      "description": "website travel adalah sebuah aplikasi web yang memungkinkan pengguna untuk mencari dan memesan tiket perjalanan, hotel, dan layanan terkait lainnya.",
+      "image": "../img/travel.png",
       "techStack": ["HTML5", "CSS3", "JavaScript"],
-      "github": "https://github.com/username/card3"
+      "github": "https://github.com/NextGithub90/travel"
     },
     {
       "id": 4,
