@@ -221,6 +221,15 @@ body {
 }
 
 @media (max-width: 768px) {
+  .text-content {
+    flex: 1 1;
+  }
+  .image-content {
+    margin: 0;
+    padding: 0;
+    /* flex: 1 1 400px; */
+    max-width: 100%;
+  }
   .container {
     flex-direction: column;
   }
